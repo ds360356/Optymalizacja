@@ -1,6 +1,6 @@
 flaga=True
 n=int(raw_input())
-print('Maksymalizuje:')
+print('Maximize')
 for i in range(1,n+1):
     for j in range(1,n+1):
         if flaga:
@@ -10,13 +10,8 @@ for i in range(1,n+1):
         print 'c'+ str(i)+','+str(j),
 
 print('')
-print('Warunki:')
- 
-for i in range (1,n+1):
-    for j in range (1,n+1):
-        print ('c' + str(i) + ',' + str(j)+ ' >= 0')
-        print ('c' + str(i) + ',' + str(j)+ ' <= 1')
-
+print('Subject to')
+        
 for j in range (1,n+1):
     flaga = True
     for i in range (1,n+1):
@@ -24,7 +19,7 @@ for j in range (1,n+1):
             flaga=False;
         else:
             print '+',
-        print 'a'+str(i)+','+str(j),
+        print 'c'+str(i)+'_'+str(j),
     print('<=1')
 
 
@@ -35,7 +30,7 @@ for i in range (1,n+1):
             flaga=False;
         else:
             print '+',
-        print 'c'+str(i)+','+str(j),
+        print 'c'+str(i)+'_'+str(j),
     print('<= 1')
 
 
@@ -48,7 +43,7 @@ for roznica in range (-n+2,n-1):
                  flaga= False;
              else:
                  print '+',
-             print 'c'+ str(i) + ',' + str(j),
+             print 'c'+ str(i) + '_' + str(j),
     print('<=1')
 
 
@@ -61,5 +56,19 @@ for suma in range (3,2*n):
                 flaga=False;
             else:
                 print '+',
-            print 'c'+str(i)+','+str(j),
+            print ('c'+str(i)+'_'+str(j)),
     print('<=1')
+
+
+print('Bounds')
+    for i in range (1,n+1):
+    for j in range (1,n+1):
+        print ('c' + str(i) + '_' + str(j)+ ' >= 0')
+        print ('c' + str(i) + '_' + str(j)+ ' <= 1')
+
+print('Generals')
+for i in range(1,n+1)
+    for j in range(1,n+1)
+        print('c'+str(i)+'_'+str(j))
+        
+print('End')
