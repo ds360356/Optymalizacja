@@ -1,0 +1,2 @@
+Algorytm pozwala maksymalizowaæ funkcjê celu przy danych ograniczeniach za pomoc¹ algorytmu podanego na drugim wyk³adzie. 
+Nale¿y podaæ iloœæ zmiennych i ich wspó³czynniki. Rozwi¹zania poszczególnych równañ za pomoc¹ programu i solwera daj¹ ten sam wynik.
